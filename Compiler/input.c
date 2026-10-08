@@ -4,11 +4,6 @@
 #include<math.h>
 int main()
 {
-	printf("\nHello World!");
-	return 0;
+ printf(“\nHello World!”);
+ return 0;
 }
-
-
-
-
-
