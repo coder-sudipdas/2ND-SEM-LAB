@@ -3,11 +3,8 @@
 %}
 
 %%
-
-^[ \t]*#[ \t]*define[^\n]*\n    ;
-
-.|\n    fprintf(yyout, "%s", yytext);
-
+^[ \t]*#[ \t]*define[^\n]*\n ;
+.|\n fprintf(yyout, "%s", yytext);
 %%
 
 int main()
@@ -20,7 +17,7 @@ int main()
     fclose(yyin);
     fclose(yyout);
 
-    printf("Macros removed successfully.");
+    printf("Macros removed successfully.\n");
     return 0;
 }
 
@@ -28,4 +25,3 @@ int yywrap()
 {
     return 1;
 }
-
